@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codenames</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- ── Header / scoreboard ── -->
+  <div class="header">
+    <div class="score-side red" id="red-side">
+      <span class="score-num" id="red-count">—</span>
+      <span class="score-label">RED</span>
+    </div>
+
+    <div class="turn-center">
+      <div id="turn-label" class="red">RED'S TURN</div>
+    </div>
+
+    <div class="score-side blue right" id="blue-side">
+      <span class="score-label">BLUE</span>
+      <span class="score-num" id="blue-count">—</span>
+    </div>
+  </div>
+
+  <!-- ── 5×5 board ── -->
+  <div class="board" id="board"></div>
+
+  <!-- ── Controls ── -->
+  <div class="controls">
+    <button class="btn ghost" id="end-turn-btn">End Turn</button>
+    <button class="btn ghost" id="show-qr-btn">Show QR Codes</button>
+    <button class="btn ghost" id="new-game-btn">New Game</button>
+  </div>
+
+  <!-- ── QR modal ── -->
+  <div class="modal" id="qr-modal">
+    <div class="modal-box">
+      <h2>Spymaster Links</h2>
+      <div class="qr-row">
+        <div class="qr-box red">
+          <h3>Red Spymaster</h3>
+          <div id="qr-red"></div>
+          <p class="url-text" id="url-red"></p>
+        </div>
+        <div class="qr-box blue">
+          <h3>Blue Spymaster</h3>
+          <div id="qr-blue"></div>
+          <p class="url-text" id="url-blue"></p>
+        </div>
+      </div>
+      <button class="btn" id="close-qr-btn">Start Playing</button>
+    </div>
+  </div>
+
+  <!-- ── Game-over modal ── -->
+  <div class="modal" id="gameover-modal">
+    <div class="modal-box">
+      <div class="gameover-title" id="gameover-title"></div>
+      <div class="gameover-sub"  id="gameover-sub"></div>
+      <button class="btn" id="gameover-new-btn">New Game</button>
+    </div>
+  </div>
+
+  <script src="/js/words.js"></script>
+  <script src="/js/game.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/board.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "codenames",
+  "version": "1.0.0",
+  "description": "Virtual Codenames for classroom use",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

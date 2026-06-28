@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codenames — Setup</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="setup-page">
+  <div class="setup-wrap">
+    <h1>Codenames</h1>
+    <p class="subtitle">Classroom Edition — Setup New Game</p>
+
+    <!-- Word source -->
+    <div class="form-group">
+      <legend>Word list</legend>
+      <div class="radio-row">
+        <div class="radio-pill words">
+          <input type="radio" name="word-source" id="src-builtin" value="builtin" checked>
+          <label for="src-builtin">
+            <span class="pill-icon">📖</span>
+            Built-in words
+          </label>
+        </div>
+        <div class="radio-pill words">
+          <input type="radio" name="word-source" id="src-custom" value="custom">
+          <label for="src-custom">
+            <span class="pill-icon">✏️</span>
+            Custom words
+          </label>
+        </div>
+      </div>
+
+      <div id="custom-area" style="display:none">
+        <textarea
+          id="custom-words"
+          placeholder="Type or paste your words, one per line or comma-separated.&#10;Need at least 25 unique words.&#10;&#10;Example:&#10;PHOTOSYNTHESIS, MITOSIS, NUCLEUS, ATOM, GRAVITY..."
+        ></textarea>
+        <p class="word-hint" id="word-hint">0 words — need at least 25</p>
+      </div>
+    </div>
+
+    <!-- First team -->
+    <div class="form-group">
+      <legend>Which team goes first?</legend>
+      <div class="radio-row">
+        <div class="radio-pill red">
+          <input type="radio" name="first-team" id="first-red" value="red" checked>
+          <label for="first-red">
+            <span class="pill-icon">🔴</span>
+            Red (9 words)
+          </label>
+        </div>
+        <div class="radio-pill blue">
+          <input type="radio" name="first-team" id="first-blue" value="blue">
+          <label for="first-blue">
+            <span class="pill-icon">🔵</span>
+            Blue (9 words)
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <p id="error-msg"></p>
+    <button class="btn start-btn" id="start-btn">Start Game</button>
+  </div>
+
+  <script src="/js/words.js"></script>
+  <script src="/js/game.js"></script>
+  <script src="/js/setup.js"></script>
+</body>
+</html>
