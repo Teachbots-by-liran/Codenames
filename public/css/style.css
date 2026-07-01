@@ -1,3 +1,93 @@
+/* ─────────────────────────────────────────────────────────────── */
+/*  HOMEPAGE                                                        */
+/* ─────────────────────────────────────────────────────────────── */
+
+.home-page {
+  display: block;
+  height: auto;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.home-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.home-title {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 900;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.home-subtitle {
+  font-size: 1rem;
+  color: var(--muted);
+  letter-spacing: 2px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 36px 24px;
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  border-color: #5a6fa0;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.5);
+}
+
+.game-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.game-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.game-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.game-play {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #5a8fd4;
+}
+
 /* ─── Reset & base ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

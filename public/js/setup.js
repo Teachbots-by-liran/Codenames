@@ -59,5 +59,5 @@ startBtn.addEventListener('click', () => {
     wordList: wordList === WORDS ? null : wordList,
   }));
 
-  window.location.href = '/';
+  window.location.href = '/codenames';
 });
