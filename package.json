@@ -1,5 +1,5 @@
 {
-  "name": "codenames",
+  "name": "classroom-games",
   "version": "1.0.0",
   "description": "Virtual Codenames for classroom use",
   "main": "server.js",
