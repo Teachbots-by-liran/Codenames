@@ -17,7 +17,7 @@ function getLocalIP() {
   return 'localhost';
 }
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), { index: false }));
 
 // On Vercel / any cloud host, return null so the browser keeps window.location.origin.
 // Locally, return the LAN IP so students' phones can connect.
